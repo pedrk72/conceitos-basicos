@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HelloWorldComponent } from './helloworld/helloWorld.component'
+import { MinhapaginaComponent } from './minhapagina/minhapagina.component'
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [HelloWorldComponent, MinhapaginaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
