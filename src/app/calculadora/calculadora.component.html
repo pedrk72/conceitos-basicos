@@ -1,0 +1,35 @@
+<!-- <div class="container">
+    <div class="form-box">
+            <form #frm="ngForm">
+                <h2>Calculator</h2>
+                <label for="number1">Number 1</label>
+                <input type="number" name="number1" id="number1" [(ngModel)]="num1"/>
+
+                <label for="number2">Number 2</label>
+                <input type="number" name="number2" id="number2" [(ngModel)]="num2"/>
+
+                <button type="button" (click)="calculateResult()">Sum</button>
+            </form>
+            <div>
+                <p>Result: <span id="result">{{ result }}</span></p>
+            </div>
+    </div> 
+</div> -->
+
+<div class="container">
+    <div class="form-box">
+            <form #frm="ngForm" (ngSubmit)="calculateResult()">
+                <h2>Calculator</h2>
+                <label for="number1">Number 1</label>
+                <input type="number" name="number1" id="number1" [(ngModel)]="num1"/>
+
+                <label for="number2">Number 2</label>
+                <input type="number" name="number2" id="number2" [(ngModel)]="num2"/>
+
+                <button type="submit">Sum</button>
+            </form>
+            <div>
+                <p>Result: <span id="result">{{ result }}</span></p>
+            </div>
+    </div> 
+</div>
