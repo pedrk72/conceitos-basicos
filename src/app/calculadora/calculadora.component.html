@@ -28,8 +28,18 @@
 
                 <button type="submit">Sum</button>
             </form>
-            <div>
-                <p>Result: <span id="result">{{ result }}</span></p>
+
+            <div class="result-display" *ngIf="result">
+                <p>Your result is right below:</p>
             </div>
+
+            @if (result) { <!-- result != 0 && result != null && result != undefined && result != false-->
+                <div>
+                    <p>Result: <span id="result">{{ result }}</span></p>
+                </div>
+            } @else {
+                <p>Your result will appear here:</p>
+            }
+
     </div> 
 </div>
